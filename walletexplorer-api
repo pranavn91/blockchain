@@ -1,0 +1,18 @@
+Here is JSON API:
+
+http://www.walletexplorer.com/api/1/address-lookup?address=16SbwNa22nBwhLtg6HzWVYFQiUxtNzAUpt&caller=panerurkar_p16@ce.vjti.ac.in
+http://www.walletexplorer.com/api/1/wallet-addresses?wallet=bitstamp&from=0&count=100&caller=panerurkar_p16@ce.vjti.ac.in
+http://www.walletexplorer.com/api/1/tx?txid=99fd988bf60ff67847488ceeb76d08a8fcca7bde80bb0b06be2ef4a0055c3ba7&caller=panerurkar_p16@ce.vjti.ac.in
+http://www.walletexplorer.com/api/1/address?address=1BitcoinEaterAddressDontSendf59kuE&from=0&count=100&caller=panerurkar_p16@ce.vjti.ac.in
+http://www.walletexplorer.com/api/1/wallet?wallet=bitstamp&from=0&count=100&caller=panerurkar_p16@ce.vjti.ac.in
+http://www.walletexplorer.com/api/1/firstbits?prefix=1bitcoin&caller=panerurkar_p16@ce.vjti.ac.in
+
+All parameters are mandatory. Parameter "caller" is whatever string do you want and it's used for personal statistics only.
+Result has always key "found" (boolean), or "error" (string, in case of bad input).
+Paging may be only by 100 items as I have fixed indexes in data files (so it's most efficient). There could be an option to get less results in future.
+Wallets can be searched by id, by label or by some variant of label (e.g. "bitstamp" instead of "Bitstamp.net"). That's pretty mess now :-)
+There's no way to get a type of label (exchange, service etc.) yet.
+Documentation is also not available yet.
+
+You can download 1 request/sec - there is some speed limiter on server configuration, if you will download faster, it will ban you for 1 hour (sorry but there were a lot of downloaders and the server was almost unusable for all).  
+
